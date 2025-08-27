@@ -5,6 +5,6 @@ provider = "docker"
 dockerfilePath = "docker/Dockerfile"
 
 [deploy]
-startCommand = "cd /app && ./run.sh"
+startCommand = "sh -c 'cd /app && ./run.sh'"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 3
