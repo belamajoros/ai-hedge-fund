@@ -3,6 +3,8 @@
 # AI Hedge Fund Web Application Setup and Runner
 # This script makes it easy for non-technical users to run the full web application
 
+cd /app || { echo "Failed to change directory to /app" ; exit 1; }
+
 set -e  # Exit on any error
 
 # Colors for output
