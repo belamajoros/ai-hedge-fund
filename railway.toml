@@ -5,6 +5,6 @@ provider = "docker"
 dockerfilePath = "docker/Dockerfile"
 
 [deploy]
-startCommand = "cd app && .\run.bat"
+startCommand = "./app/run.sh"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 3
