@@ -5,6 +5,14 @@ WORKDIR /app
 # Set PYTHONPATH to include the app directory
 ENV PYTHONPATH=/app
 
+# Install system deps
+RUN apt-get update && apt-get install -y curl build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Node.js + npm (LTS)
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs
+
 # Install Poetry
 RUN pip install poetry==1.7.1
 
